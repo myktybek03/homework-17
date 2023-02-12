@@ -1,5 +1,5 @@
 import React from "react"
-import { HashRouter, Route, Routes } from "react-router-dom"
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom"
 import SideBar from "./components/sidebar/Sidebar"
 import Courses from "./pages/Courses"
 import Anouncements from "./pages/Anouncements"
@@ -37,6 +37,7 @@ const App = () => {
           <Route path="/anouncements" element={<Anouncements />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/schedule" element={<Schedule />} />
+          <Route path="*" element={<Navigate to="/courses/materials" />} />
         </Routes>
       </SideBar>
     </HashRouter>
